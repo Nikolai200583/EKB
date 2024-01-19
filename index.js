@@ -109,7 +109,7 @@ function setAtribute() {
   let count = 0;
   for (const elem of dayBox) {
     elem.textContent = setWeek[count];
-    if (count >= 6) {
+    if (count >= setWeek.length) {
       return;
     }
     count++;
@@ -133,6 +133,13 @@ function isToday() {
   const today = document.querySelector(".date-control__button_today");
   const containerDay = document.querySelectorAll(".containerDay");
   today.addEventListener("click", () => {
+    const date = new Date();
+    getMonth = date.getMonth();
+    getYear = date.getFullYear();
+    indexDay = 0;
+    setedMonth.textContent = setMonth[getMonth];
+    setedYear.textContent = getYear;
+    createCalendar(calendar, getYear, getMonth);
     for (const elem of containerDay) {
       if (elem.getAttribute("data-day") == numberDay) {
         elem.classList.add("focus");

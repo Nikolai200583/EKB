@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.center {
+  padding-left: calc(50% - 525px);
+  padding-right: calc(50% - 525px);
+}
+.calendar-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: rgb(243, 243, 243);
+  border-bottom: 3px solid rgb(206, 206, 206);
+}
+
+.button-group button {
+  padding: 3px 5px;
+  background-color: #5165da;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.header__search input {
+  padding: 3px 10px;
+  width: 200px;
+  border-radius: 5px;
+  outline: none;
+}
+.date-control {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.date-control__button_previous {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background: none;
+}
+.date-control__button_next {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background: none;
+}
+.date-control__setDate {
+  display: flex;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+}
+.date-control__button_today {
+  margin-left: 30px;
+  height: 25px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  background: none;
+}
+table {
+  border-collapse: collapse;
+}
+
+td {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  padding: 3px;
+  padding-left: 10px;
+}
+tr:nth-child(1) {
+  background-color: rgb(243, 243, 243);
+}
+.dayBox {
+  position: absolute;
+  top: 7%;
+}
+.containerDay:hover{
+  background-color: rgb(212, 212, 212);
+}
+.focus {
+  background-color: rgb(170, 170, 170);
+}

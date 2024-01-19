@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calendar-wrapper">
+      <header class="header center">
+        <div class="button-group">
+          <button class="button-group__add">Добавить</button>
+          <button class="button-group__reload">Обновить</button>
+        </div>
+        <div class="header__search">
+          <label for="search">&#128269;</label>
+          <input
+            id="search"
+            type="text"
+            placeholder="Событие, дата или участник"
+          />
+        </div>
+      </header>
+      <div class="date-control center">
+        <button class="date-control__button_previous">&#9668;</button>
+        <div class="date-control__setDate">
+          <span class="setedMonth"></span>
+          <span class="setedYear"></span>
+        </div>
+        <button class="date-control__button_next">&#9658;</button>
+        <button class="date-control__button_today">Сегодня</button>
+      </div>
+      <div class="center" id="calendar"></div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

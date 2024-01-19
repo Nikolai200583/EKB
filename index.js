@@ -140,10 +140,14 @@ function isToday() {
     setedMonth.textContent = setMonth[getMonth];
     setedYear.textContent = getYear;
     createCalendar(calendar, getYear, getMonth);
-    for (const elem of containerDay) {
-      if (elem.getAttribute("data-day") == numberDay) {
-        elem.classList.add("focus");
-      }
-    }
+    markDay();
   });
+}
+function markDay() {
+  const containerDay = document.querySelectorAll(".containerDay");
+  for (const elem of containerDay) {
+    if (elem.getAttribute("data-day") == numberDay) {
+      elem.classList.add("focus");
+    }
+  }
 }
